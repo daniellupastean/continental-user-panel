@@ -24,17 +24,22 @@
         align-items: center;
         font-size: 18px;
 
-        .bookings, .add-review{
+        .bookings{
             margin-right: 20px;
             color: var(--light-grey-2);
             font-weight: 400;
             font-size: 18px;
             margin-left: 3px;
         }
-
+        .add-review{
+            margin-right: 20px;
+            color: var(--light-grey-2);
+            font-weight: 400;
+            font-size: 18px;
+            margin-left: 3px;
+        }
         .review{
             color: var(--light-grey-2);
-            font-size: 15px;
         }
 
         .auth_button{
@@ -46,9 +51,11 @@
             color: var(--pure-white);
             font-weight: 500;
 
+
             a{
                 color: var(--pure-white);
                 padding: 5px;
+                
                 &:hover{
                     text-decoration: underline;
                 }
@@ -63,8 +70,13 @@
             }
         }
     }
+    @media (max-width: 1080px){
+        .options a:nth-of-type(1){
+            display: none;
+        }
+    }
 
-    @media (max-width: 1060px){
+    @media (max-width: 1010px){
         display: none;
     }
 }

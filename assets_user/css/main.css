@@ -168,7 +168,7 @@ input {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1010px) {
   .nav__center {
     display: none;
   }
@@ -329,7 +329,7 @@ input {
   }
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1010px) {
   .content {
     min-height: calc(100vh - 78px);
   }
@@ -500,7 +500,15 @@ input {
   font-size: 18px;
 }
 
-.user-services .client_area .bookings, .user-services .client_area .add-review {
+.user-services .client_area .bookings {
+  margin-right: 20px;
+  color: var(--light-grey-2);
+  font-weight: 400;
+  font-size: 18px;
+  margin-left: 3px;
+}
+
+.user-services .client_area .add-review {
   margin-right: 20px;
   color: var(--light-grey-2);
   font-weight: 400;
@@ -510,7 +518,6 @@ input {
 
 .user-services .client_area .review {
   color: var(--light-grey-2);
-  font-size: 15px;
 }
 
 .user-services .client_area .auth_button {
@@ -541,13 +548,19 @@ input {
   text-decoration: none;
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1080px) {
+  .user-services .options a:nth-of-type(1) {
+    display: none;
+  }
+}
+
+@media (max-width: 1010px) {
   .user-services {
     display: none;
   }
 }
 
-.review {
+.reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -558,18 +571,18 @@ input {
   padding-bottom: 40px;
 }
 
-.review hr {
+.reviews hr {
   width: 100%;
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--light-grey-1), rgba(0, 0, 0, 0));
 }
 
-.review .header {
+.reviews .header {
   width: 100%;
 }
 
-.review .header .label {
+.reviews .header .label {
   color: var(--light-grey-2);
   font-size: 25px;
   font-weight: 700;
@@ -578,7 +591,7 @@ input {
   text-align: center;
 }
 
-.review .review-form {
+.reviews .review-form {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -586,7 +599,7 @@ input {
   height: 100%;
 }
 
-.review .review-form input, .review .review-form textarea {
+.reviews .review-form input, .reviews .review-form textarea {
   font-family: 'Roboto';
   border: none;
   font-size: 18px;
@@ -598,18 +611,18 @@ input {
   border-radius: 2pz;
 }
 
-.review .review-form .subject, .review .review-form .message {
+.reviews .review-form .subject, .reviews .review-form .message {
   margin-bottom: 30px;
   padding: 15px;
 }
 
-.review .review-form .message {
+.reviews .review-form .message {
   min-height: 300px;
   height: calc(100vh - 550px);
   max-height: 600px;
 }
 
-.review .review-form .send {
+.reviews .review-form .send {
   border: none;
   padding: 15px;
   letter-spacing: 1px;
@@ -621,12 +634,12 @@ input {
   font-weight: 500;
 }
 
-.review .review-form .send:hover {
+.reviews .review-form .send:hover {
   opacity: 0.8;
 }
 
 @media (max-height: 800px) {
-  .review .header .label {
+  .reviews .header .label {
     padding: 30px 20px 20px 20px;
   }
 }
