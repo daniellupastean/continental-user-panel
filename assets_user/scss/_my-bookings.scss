@@ -1,15 +1,15 @@
-rooms{
+.reservations{
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
     justify-content: space-evenly;
     flex-wrap: wrap;
     background-color: var(--pure-white);
-    // border-radius: 10px;
     box-shadow: 2px 0 40px -25px;
     width: 90%;
     margin: 30px auto 0 auto;
     padding-bottom: 40px;
+
      hr{
         width: 100%;
         border: 0;
@@ -23,7 +23,7 @@ rooms{
         font-weight: 500;
 
         .label{
-            font-size: 20px;
+            font-size: 25px;
             font-weight: 700;
             letter-spacing: 1px;
             padding: 40px 0 40px 0;
@@ -32,7 +32,7 @@ rooms{
         .table-header{
             display: grid;
             width: 100%;
-            grid-template-columns: 0.5fr 0.8fr 0.8fr 0.8fr 1fr 0.5fr;
+            grid-template-columns: 0.4fr 0.8fr 0.8fr 0.8fr 1fr 0.5fr;
             padding: 10px;
         }
 
@@ -40,10 +40,37 @@ rooms{
     .table-row{
         display: grid;
         width: 100%;
-        grid-template-columns: 0.5fr 0.8fr 0.8fr 0.8fr 1fr 0.5fr;
+        grid-template-columns: 0.4fr 0.8fr 0.8fr 0.8fr 1fr 0.5fr;
         padding: 10px;
         color: var(--dark-grey-2);
         align-items: center;
+
+        .short{
+            letter-spacing: 0;
+        }
+
+        .cancel-booking{
+            align-self: center;
+            text-align: center;
+            margin: 10px auto 10px auto;
+            font-family: 'Roboto';
+            font-size: 11px;
+            color: var(--pure-white);
+            font-weight: 500;
+            background-color: var(--dark-caramel);
+            border: none;
+            padding: 5px 8px;
+            cursor: pointer;
+            width: 65px;
+
+            a{
+                color: var(--pure-white);
+            }
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
     }
 
     .user{
