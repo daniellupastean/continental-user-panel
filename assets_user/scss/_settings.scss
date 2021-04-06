@@ -10,7 +10,7 @@
     // border-radius: 10px;
     box-shadow: 2px 0 40px -25px;
     width: 90%;
-    min-height: calc(100vh - 78px - 39px - 80px - 50px);
+    min-height: calc(100vh - 78px - 39px - 80px - 60px);
     margin: 30px auto 0 auto;
     padding-bottom: 40px;
     
@@ -123,9 +123,14 @@
     }
 
 
-    @media (max-height: 800px){
+    @media (max-width: 1010px) {
+        min-height: calc(100vh - 78px - 39px - 80px - 0px);
+    }
 
-        min-height: calc(100vh - 78px - 39px - 20px - 50px);
+
+    @media (max-height: 860px){
+
+        min-height: calc(100vh - 78px - 39px - 20px - 100px);
         margin-top: 20px;
         margin-bottom: -10px;
         .element{

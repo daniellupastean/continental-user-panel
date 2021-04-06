@@ -78,7 +78,7 @@
                             <div class="selector"></div><i class="far fa-calendar-alt"></i>Bookings
                         </a>
                     </li>
-                    <li>
+                    <li class="actual">
                         <a href="transactions.html">
                             <div class="selector"></div><i class="far fa-credit-card"></i>Transactions
                         </a>
@@ -88,7 +88,7 @@
                             <div class="selector"></div><i class="fas fa-pencil-alt"></i>Review
                         </a>
                     </li>
-                    <li class="actual">
+                    <li>
                         <a href="settings.html">
                             <div class="selector"></div><i class="fas fa-cog"></i>Settings
                         </a>
@@ -97,47 +97,40 @@
             </div>
         </div>
 
-        <!-- CONTENT SETTINGS START-->
+        <!-- CONTENT MY TRANSACTIONS START-->
 
         <div class="content">
-            <form action="#" id="settings_form">
-                <h1 class="edit_employee_header">SETTINGS</h1>
-                <hr>
-                <div class="element">
-                    <label for="names">Name</label>
-                    <input type="text" value="" spellcheck="false" placeholder="" id="names" required>
-                </div>
-                <!-- <div class="element">
-                    <label for="position">Position</label>
-                    <select name="positions" id="position">
-                        <option value="Manager">Manager</option>
-                        <option value="Administrator">Administrator</option>
-                        <option value="Accountant">Accountant</option>
-                        <option value="Housekeeper">Housekeeper</option>
-                    </select>
-                </div> -->
-                <div class="element">
-                    <label for="phone">Phone</label>
-                    <input type="tel" pattern="[\d\+]{10,15}" value="" spellcheck="false" placeholder="" id="phone"
-                        required>
-                </div>
-                <div class="element">
-                    <label for="emails">Email</label>
-                    <input type="email" value="" spellcheck="false" placeholder="" id="emails" required>
-                </div>
-                <div class="element">
-                    <label for="passwords">Password</label>
-                    <input type="password" spellcheck="false" placeholder="" id="passwords" required>
+            <div class="transactions">
+                <div class="header">
+                    <div class="label">MY TRANSACTIONS</div>
+                    <hr>
+                    <div class="table-header">
+                        <div class="parameter center"></div>
+                        <div class="parameter">ROOM</div>
+                        <div class="parameter">TYPE</div>
+                        <div class="parameter">PRICE</div>
+                        <div class="parameter">DATE</div>
+                        <div class="parameter">STATUS</div>
+                    </div>
                 </div>
                 <hr>
-                <div class="edit_employee_footer">
-                    <!-- <button class="cancelBtn2" form="">Cancel</button> -->
-                    <button type="update" form="settings_form" value="Submit">Update</button>
+
+                <div class="table-row">
+                    <div class="value center"><a href="" class="fas fa-file-alt user"></a></div>
+                    <div class="value  name">Room 0.1</div>
+                    <div class="value">Single</div>
+                    <div class="value">€150</div>
+                    <div class="value short">01.05.2021</div>
+                    <div class="parameter">In Progress</div>
                 </div>
-            </form>
+                <hr>
+
+            </div>
+
             <footer>Continental &copy; 2021</footer>
         </div>
-        <!-- CONTENT SETTINGS END -->
+
+        <!-- CONTENT MY TRANSACTIONS END -->
     </div>
 
     <script src="assets_user/js/main.js"></script>

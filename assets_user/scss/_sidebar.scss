@@ -10,7 +10,7 @@
     position: sticky;
     z-index: 800;
     top: 0;
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 
     &.shown{
         position: fixed;
@@ -103,14 +103,14 @@
         margin-top: 78px;
         min-height: calc(100vh - 78px);
         position: fixed;
-        transform: translate(-220px, 0);
+        transform: translate(-250px, 0);
     }
 
     @media (max-width: 1000px){
-        width: 190px;
+        width: 230px;
 
         &__options{
-            font-size: 18px;
+            font-size: 20px;
         }
     }
 }

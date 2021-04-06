@@ -110,7 +110,7 @@
         a{
             font-size: 30px;
             color: var(--dark-caramel);
-            padding: 15px 15px 15px 5px;
+            padding: 15px 0px 15px 5px;
             // margin-right: 10px;
 
             :hover{
@@ -125,7 +125,7 @@
 @media (max-width: 600px)
 {
     .nav{
-        padding: 0 10px 0 9px;
+        padding: 0 5px 0 9px;
         justify-content: space-between;
 
         .hamburger{

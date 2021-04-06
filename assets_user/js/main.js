@@ -8,13 +8,16 @@ menuBtn.addEventListener('click', () => {
     if (!menuOpen) {
         menuBtn.classList.add('open');
         sidebar.classList.add('shown');
+        // sidebar.style.opacity = "1";
         content.style.filter = "brightness(40%)";
         menuOpen = true;
     } else {
         menuBtn.classList.remove('open');
         sidebar.classList.remove('shown');
+        // sidebar.style.opacity = "0";
         content.style.filter = "brightness(100%)";
         menuOpen = false;
+
     }
 });
 
