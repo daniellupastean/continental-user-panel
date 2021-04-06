@@ -83,12 +83,12 @@
                             <div class="selector"></div><i class="far fa-credit-card"></i>Transactions
                         </a>
                     </li>
-                    <li class="actual">
+                    <li>
                         <a href="review.html">
                             <div class="selector"></div><i class="fas fa-pencil-alt"></i>Review
                         </a>
                     </li>
-                    <li>
+                    <li class="actual">
                         <a href="settings.html">
                             <div class="selector"></div><i class="fas fa-cog"></i>Settings
                         </a>
@@ -97,23 +97,47 @@
             </div>
         </div>
 
-        <!-- CONTENT REVIEW START-->
+        <!-- CONTENT SETTINGS START-->
 
         <div class="content">
-            <div class="reviews">
-                <div class="header">
-                    <div class="label">WRITE A REVIEW</div>
-                    <hr>
+            <form action="#" id="settings_form">
+                <h1 class="edit_employee_header">SETTINGS</h1>
+                <hr>
+                <div class="element">
+                    <label for="names">Name</label>
+                    <input type="text" value="" spellcheck="false" placeholder="" id="names" required>
                 </div>
-                <form action="emails.html" class="review-form">
-                    <textarea class="message" placeholder="Write the review here..." spellcheck="false"></textarea>
-                    <input class="send" type="submit" name="" value="Post">
-                </form>
-
-            </div>
+                <!-- <div class="element">
+                    <label for="position">Position</label>
+                    <select name="positions" id="position">
+                        <option value="Manager">Manager</option>
+                        <option value="Administrator">Administrator</option>
+                        <option value="Accountant">Accountant</option>
+                        <option value="Housekeeper">Housekeeper</option>
+                    </select>
+                </div> -->
+                <div class="element">
+                    <label for="phone">Phone</label>
+                    <input type="tel" pattern="[\d\+]{10,15}" value="" spellcheck="false" placeholder="" id="phone"
+                        required>
+                </div>
+                <div class="element">
+                    <label for="emails">Email</label>
+                    <input type="email" value="" spellcheck="false" placeholder="" id="emails" required>
+                </div>
+                <div class="element">
+                    <label for="passwords">Password</label>
+                    <input type="password" spellcheck="false" placeholder="" id="passwords" required>
+                </div>
+                <hr>
+                <div class="edit_employee_footer">
+                    <!-- <button class="cancelBtn2" form="">Cancel</button> -->
+                    <button type="update" form="settings_form" value="Submit">Update</button>
+                </div>
+            </form>
             <footer>Continental &copy; 2021</footer>
         </div>
-        <!-- CONTENT REVIEW END -->
+        <!-- CONTENT SETTINGS END -->
     </div>
 
     <script src="assets_user/js/main.js"></script>
