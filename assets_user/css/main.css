@@ -685,13 +685,13 @@ input {
   }
 }
 
-#settings_form {
+.settings_forms {
   letter-spacing: 2px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  align-content: center;
-  justify-content: flex-start;
+  align-content: flex-start;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: var(--pure-white);
   box-shadow: 2px 0 40px -25px;
@@ -701,37 +701,60 @@ input {
   padding-bottom: 40px;
 }
 
-#settings_form hr {
-  height: 3px;
-  width: 80%;
-  border: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--light-white), rgba(0, 0, 0, 0));
-}
-
-#settings_form hr:nth-of-type(1) {
-  margin-top: -10px;
-}
-
-#settings_form hr:nth-of-type(2) {
-  margin-top: 20px;
-}
-
-#settings_form h1 {
+.settings_forms h1 {
   font-weight: 700;
   font-size: 25px;
   color: var(--light-grey-2);
   margin: 40px;
+  width: 100%;
+  text-align: center;
 }
 
-#settings_form .element {
-  display: grid;
-  width: 80%;
-  grid-template-columns: 1.5fr 4fr;
-  align-items: center;
+.settings_forms hr {
+  height: 3px;
+  width: 90%;
+  border: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--light-white), rgba(0, 0, 0, 0));
+}
+
+.settings_forms hr:nth-of-type(1) {
+  margin-top: -10px;
+}
+
+.settings_forms hr:nth-of-type(2) {
   margin-top: 20px;
 }
 
-#settings_form .element label {
+.settings_forms #settings_form_1, .settings_forms #settings_form_2 {
+  margin-top: 30px;
+  width: 45%;
+  display: flex;
+  padding: 20px 0 30px 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settings_forms #settings_form_1 .subtitle1, .settings_forms #settings_form_2 .subtitle1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--pure-white);
+  font-weight: 500;
+  width: 90%;
+  height: 40px;
+  text-align: center;
+  background: var(--dark-grey-1);
+}
+
+.settings_forms #settings_form_1 .element, .settings_forms #settings_form_2 .element {
+  display: grid;
+  width: 90%;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.settings_forms #settings_form_1 .element label, .settings_forms #settings_form_2 .element label {
   display: flex;
   align-items: center;
   color: var(--dark-grey-2);
@@ -743,7 +766,17 @@ input {
   background-color: var(--light-grey-1);
 }
 
-#settings_form input {
+.settings_forms #settings_form_1 input, .settings_forms #settings_form_2 input {
+  color: var(--dark-grey-2);
+  width: 100%;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  background-color: var(--light-white);
+  outline: none;
+}
+
+.settings_forms #settings_form_1 select, .settings_forms #settings_form_2 select {
   color: var(--dark-grey-2);
   width: 100%;
   font-size: 18px;
@@ -752,18 +785,9 @@ input {
   background-color: var(--light-white);
 }
 
-#settings_form select {
-  color: var(--dark-grey-2);
-  width: 100%;
-  font-size: 18px;
-  padding: 15px;
-  border: none;
-  background-color: var(--light-white);
-}
-
-#settings_form button {
+.settings_forms #settings_form_1 button, .settings_forms #settings_form_2 button {
   background-color: var(--dark-caramel);
-  width: 27.27%;
+  width: 50%;
   outline: none;
   letter-spacing: 1px;
   border: none;
@@ -775,53 +799,56 @@ input {
   font-size: 18px;
 }
 
-#settings_form button:hover {
+.settings_forms #settings_form_1 button:hover, .settings_forms #settings_form_2 button:hover {
   opacity: 0.8;
 }
 
-#settings_form .edit_employee_footer {
+.settings_forms #settings_form_1 .edit_employee_footer, .settings_forms #settings_form_2 .edit_employee_footer {
   width: 80%;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 @media (max-width: 800px) {
-  #settings_form .element {
+  .settings_forms .element {
     display: grid;
     grid-template-columns: 1fr;
   }
-  #settings_form .element label {
+  .settings_forms .element label {
     height: 30px;
   }
-  #settings_form button {
+  .settings_forms button {
     width: 50%;
   }
 }
 
-@media (max-width: 1010px) {
-  #settings_form {
+@media (max-width: 1010px), (orientation: portrait) {
+  .settings_forms {
     min-height: calc(100vh - 78px - 39px - 80px - 0px);
+  }
+  .settings_forms #settings_form_1, .settings_forms #settings_form_2 {
+    width: 80%;
   }
 }
 
 @media (max-height: 860px) {
-  #settings_form {
+  .settings_forms {
     min-height: calc(100vh - 78px - 39px - 20px - 100px);
     margin-top: 20px;
     margin-bottom: -10px;
   }
-  #settings_form .element {
+  .settings_forms .element {
     margin-top: 10px;
   }
-  #settings_form .edit_employee_footer {
+  .settings_forms .edit_employee_footer {
     margin-top: 20px;
     margin-bottom: -10px;
   }
-  #settings_form h1 {
+  .settings_forms h1 {
     margin: 30px;
   }
-  #settings_form hr:nth-of-type(2) {
+  .settings_forms hr:nth-of-type(2) {
     margin-top: 12px;
   }
 }

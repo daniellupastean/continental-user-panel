@@ -100,41 +100,53 @@
         <!-- CONTENT SETTINGS START-->
 
         <div class="content">
-            <form action="#" id="settings_form">
+            <div class="settings_forms">
                 <h1 class="edit_employee_header">SETTINGS</h1>
                 <hr>
-                <div class="element">
-                    <label for="names">Name</label>
-                    <input type="text" value="" spellcheck="false" placeholder="" id="names" required>
-                </div>
-                <!-- <div class="element">
-                    <label for="position">Position</label>
-                    <select name="positions" id="position">
-                        <option value="Manager">Manager</option>
-                        <option value="Administrator">Administrator</option>
-                        <option value="Accountant">Accountant</option>
-                        <option value="Housekeeper">Housekeeper</option>
-                    </select>
-                </div> -->
-                <div class="element">
-                    <label for="phone">Phone</label>
-                    <input type="tel" pattern="[\d\+]{10,15}" value="" spellcheck="false" placeholder="" id="phone"
-                        required>
-                </div>
-                <div class="element">
-                    <label for="emails">Email</label>
-                    <input type="email" value="" spellcheck="false" placeholder="" id="emails" required>
-                </div>
-                <div class="element">
-                    <label for="passwords">Password</label>
-                    <input type="password" spellcheck="false" placeholder="" id="passwords" required>
-                </div>
-                <hr>
-                <div class="edit_employee_footer">
-                    <!-- <button class="cancelBtn2" form="">Cancel</button> -->
-                    <button type="update" form="settings_form" value="Submit">Update</button>
-                </div>
-            </form>
+                <form action="#" id="settings_form_1">
+                    <div class="subtitle1">Change Details</div>
+                    <div class="element">
+                        <!-- <label for="names">Name</label> -->
+                        <input type="text" value="" spellcheck="false" placeholder="Name" id="names" required>
+                    </div>
+                    <div class="element">
+                        <!-- <label for="phone">Phone</label> -->
+                        <input type="tel" pattern="[\d\+]{10,15}" value="" spellcheck="false" placeholder="Phone Number"
+                            id="phone" required>
+                    </div>
+                    <div class="element">
+                        <!-- <label for="emails">Email</label> -->
+                        <input type="email" value="" spellcheck="false" placeholder="Email" id="emails" required>
+                    </div>
+
+                    <div class="edit_employee_footer">
+                        <!-- <button class="cancelBtn2" form="">Cancel</button> -->
+                        <button type="update" form="settings_form_1" value="Submit">Update</button>
+                    </div>
+                </form>
+                <form action="#" id="settings_form_2">
+                    <div class="subtitle1">Change Password</div>
+                    <div class="element">
+                        <!-- <label for="passwords">Password</label> -->
+                        <input type="password" spellcheck="false" placeholder="Old Password" id="passwords" required>
+                    </div>
+                    <div class="element">
+                        <!-- <label for="passwords">Password</label> -->
+                        <input type="password" spellcheck="false" placeholder="New Password" id="passwords" required>
+                    </div>
+                    <div class="element">
+                        <!-- <label for="passwords">Password</label> -->
+                        <input type="password" spellcheck="false" placeholder="Confirm New Password" id="passwords"
+                            required>
+                    </div>
+
+                    <div class="edit_employee_footer">
+                        <!-- <button class="cancelBtn2" form="">Cancel</button> -->
+                        <button type="update" form="settings_form_2" value="Submit">Update</button>
+                    </div>
+                </form>
+                <!-- <hr> -->
+            </div>
             <footer>Continental &copy; 2021</footer>
         </div>
         <!-- CONTENT SETTINGS END -->
