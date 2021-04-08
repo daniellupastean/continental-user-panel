@@ -358,6 +358,7 @@ input {
 }
 
 .reservations hr {
+  display: none;
   width: 100%;
   border: 0;
   height: 2px;
@@ -380,10 +381,13 @@ input {
 
 .reservations .header .table-header {
   display: grid;
+  align-items: center;
   width: 100%;
+  height: 50px;
   grid-template-columns: 0.4fr 0.8fr 0.8fr 0.8fr 1fr 0.5fr;
   padding: 10px;
-  background-color: var(--light-white);
+  background-color: var(--dark-grey-2);
+  color: var(--light-white);
 }
 
 .reservations .table-row {
@@ -394,6 +398,10 @@ input {
   color: var(--dark-grey-2);
   align-items: center;
   font-weight: 500;
+}
+
+.reservations .table-row:nth-of-type(odd) {
+  background-color: var(--light-white);
 }
 
 .reservations .table-row .short {
@@ -473,6 +481,9 @@ input {
 }
 
 @media (max-width: 900px) {
+  .reservations hr {
+    display: block;
+  }
   .reservations .header .table-header {
     display: none;
   }
@@ -487,6 +498,12 @@ input {
     grid-template-columns: 1fr;
     text-align: center;
     line-height: 1.4;
+  }
+  .reservations .table-row:nth-of-type(odd) {
+    background-color: var(--pure-white);
+  }
+  .reservations .table-row:nth-of-type(even) {
+    background-color: var(--light-white);
   }
 }
 
@@ -738,12 +755,12 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--pure-white);
+  color: var(--light-white);
   font-weight: 500;
   width: 90%;
   height: 40px;
   text-align: center;
-  background: var(--dark-grey-1);
+  background: var(--dark-grey-2);
 }
 
 .settings_forms #settings_form_1 .element, .settings_forms #settings_form_2 .element {
@@ -788,6 +805,7 @@ input {
 .settings_forms #settings_form_1 button, .settings_forms #settings_form_2 button {
   background-color: var(--dark-caramel);
   width: 50%;
+  min-width: 170px;
   outline: none;
   letter-spacing: 1px;
   border: none;
@@ -800,7 +818,7 @@ input {
 }
 
 .settings_forms #settings_form_1 button:hover, .settings_forms #settings_form_2 button:hover {
-  opacity: 0.8;
+  filter: brightness(0.9);
 }
 
 .settings_forms #settings_form_1 .edit_employee_footer, .settings_forms #settings_form_2 .edit_employee_footer {
@@ -811,9 +829,9 @@ input {
 }
 
 .settings_forms #delete-button {
-  margin-top: 30px;
-  min-width: 11%;
-  padding: 15px;
+  margin-top: 40px;
+  min-width: 21%;
+  padding: 17px;
   background: #be3838;
   opacity: 0.7;
   color: white;
@@ -824,22 +842,24 @@ input {
   opacity: 0.9;
 }
 
-@media (max-width: 800px) {
-  .settings_forms .element {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .settings_forms .element label {
-    height: 30px;
-  }
-}
-
 @media (max-width: 1010px), (orientation: portrait) {
   .settings_forms {
     min-height: calc(100vh - 78px - 39px - 80px - 0px);
   }
   .settings_forms #settings_form_1, .settings_forms #settings_form_2 {
     width: 80%;
+  }
+  .settings_forms #settings_form_1 .edit_employee_footer, .settings_forms #settings_form_2 .edit_employee_footer {
+    margin-top: 20px;
+  }
+}
+
+@media (max-height: 1100px) and (orientation: portrait) {
+  .settings_forms #settings_form_1, .settings_forms #settings_form_2 {
+    margin-top: 0px;
+  }
+  .settings_forms #delete-button {
+    margin-top: 20px;
   }
 }
 
@@ -864,6 +884,19 @@ input {
   }
 }
 
+@media (max-width: 800px) {
+  .settings_forms .element {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .settings_forms .element label {
+    height: 30px;
+  }
+  .settings_forms #settings_form_1, .settings_forms #settings_form_2 {
+    width: 95%;
+  }
+}
+
 .transactions {
   display: flex;
   align-items: flex-start;
@@ -879,6 +912,7 @@ input {
 }
 
 .transactions hr {
+  display: none;
   width: 100%;
   border: 0;
   height: 2px;
@@ -901,10 +935,13 @@ input {
 
 .transactions .header .table-header {
   display: grid;
+  align-items: center;
   width: 100%;
+  height: 50px;
   grid-template-columns: 0.4fr 0.8fr 0.8fr 0.8fr 1fr 0.8fr;
   padding: 10px;
-  background-color: var(--light-white);
+  background-color: var(--dark-grey-2);
+  color: var(--light-white);
 }
 
 .transactions .table-row {
@@ -915,6 +952,10 @@ input {
   color: var(--dark-grey-2);
   align-items: center;
   font-weight: 500;
+}
+
+.transactions .table-row:nth-of-type(odd) {
+  background-color: var(--light-white);
 }
 
 .transactions .table-row .short {
@@ -971,6 +1012,9 @@ input {
 }
 
 @media (max-width: 900px) {
+  .transactions hr {
+    display: block;
+  }
   .transactions .header .table-header {
     display: none;
   }
@@ -985,6 +1029,12 @@ input {
     grid-template-columns: 1fr;
     text-align: center;
     line-height: 1.4;
+  }
+  .transactions .table-row:nth-of-type(odd) {
+    background-color: var(--pure-white);
+  }
+  .transactions .table-row:nth-of-type(even) {
+    background-color: var(--light-white);
   }
 }
 
